@@ -38,10 +38,10 @@ export default function Sidebar() {
                         <span className={`menu-text ${isOpen ? "visible" : ""}`}>Chat</span>
                     </li>
                     {/* Token vai para /token */}
-                    <li onClick={() => handleNavigation("/token")}>
-                        <FiKey size={24} />
-                        <span className={`menu-text ${isOpen ? "visible" : ""}`}>Token</span>
-                    </li>
+                    {/*<li onClick={() => handleNavigation("/token")}>*/}
+                    {/*    <FiKey size={24} />*/}
+                    {/*    <span className={`menu-text ${isOpen ? "visible" : ""}`}>Token</span>*/}
+                    {/*</li>*/}
                 </ul>
             </nav>
         </>
