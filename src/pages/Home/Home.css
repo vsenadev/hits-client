@@ -1,0 +1,193 @@
+.home-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0 0 5rem;
+    gap: 2rem;
+}
+
+.empresas-list, .documents-container {
+    width: 48%;
+}
+
+h1, h2 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.empresas {
+    list-style: none;
+    padding: 0;
+}
+
+.empresas li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #ffffff;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.empresas li:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.empresas li.selected {
+    border: 2px solid #4CAF50;
+    background-color: #f9f9f9;
+}
+
+.actions button {
+    margin-left: 10px;
+    background-color: #ff5959;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.actions button:hover {
+    background-color: #e04e4e;
+}
+
+.add-btn, .edit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.add-btn:hover, .edit-btn:hover {
+    background-color: #45a049;
+}
+
+.empresa-input {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 60%;
+    margin-right: 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.empresa-input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.documents-list {
+    list-style: none;
+    padding: 0;
+}
+
+.documents-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.documents-list li span {
+    flex: 1;
+}
+
+.upload-container {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.upload-container input {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.upload-container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.upload-container button:disabled {
+    background-color: #cfcfcf;
+    cursor: not-allowed;
+}
+
+.upload-container button:hover {
+    background-color: #45a049;
+}
+
+.upload-container button span {
+    margin-left: 10px;
+}
+
+.edit-empresa input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 50%;
+    margin-right: 10px;
+}
+
+.edit-empresa button {
+    background-color: #2f8b30;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-empresa button:hover {
+    background-color: #268a29;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .empresas-list, .documents-container {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .empresa-input {
+        width: 80%;
+    }
+
+    .add-btn, .edit-btn, .upload-container button {
+        width: 100%;
+        padding: 12px;
+    }
+}

@@ -1,0 +1,95 @@
+/* Estilos gerais */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 60px;
+    background-color: #1e1e2f;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1000;
+}
+
+/* Quando a sidebar está aberta */
+.sidebar.open {
+    width: 200px;
+}
+
+/* Ícone do menu hambúrguer */
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 15px;
+    z-index: 1100;
+    display: none; /* Escondido em telas grandes */
+}
+
+/* Ícone do hambúrguer no mobile */
+.mobile-only {
+    display: none;
+}
+
+/* Estilização do menu */
+.menu {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.menu li:hover {
+    background: #2a2a3a;
+}
+
+.menu li svg {
+    min-width: 24px;
+}
+
+/* Esconde o texto quando a sidebar está fechada */
+.menu-text {
+    margin-left: 10px;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.3s;
+}
+
+.menu-text.visible {
+    opacity: 1;
+}
+
+/* Responsividade: Menu hamburguer para telas pequenas */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        overflow: hidden;
+    }
+
+    .sidebar.open {
+        width: 200px;
+    }
+
+    /* Mostra o botão hamburguer em preto */
+    .menu-btn.mobile-only {
+        display: block;
+        background: white;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+}
