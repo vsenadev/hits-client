@@ -117,3 +117,33 @@ button:hover:not(:disabled) {
         width: 100%;
     }
 }
+
+.references {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.chevron {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.chevron:hover {
+    color: #0056b3;
+}
+
+.references-list {
+    list-style: none;
+    padding-left: 15px;
+    margin-top: 5px;
+}
+
+.references-list li {
+    font-size: 0.85rem;
+    color: #555;
+}
+
